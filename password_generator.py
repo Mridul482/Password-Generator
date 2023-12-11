@@ -2,15 +2,6 @@ import secrets
 import string
 import random
 
-
-# code should start with the password manager
-#1. password manager asks the user if they want to add or view
-#If add: 
-# password generator code under the add function
-#if view: 
-# same code under the view function
-
-
 print("Welcome to password manager!")
 saveaccess_password = input("Do you want to save or have access to your passwords?(yes or no): ").lower()
 
