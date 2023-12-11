@@ -62,6 +62,13 @@ if saveaccess_password == "yes":
         else:
             pass
 
+    def add():
+        website = input("what website is this password for? ")
+        name = input("Account Name: ")
+        pwd = input("What is the password? ")
+        with open("passwords.txt","a") as f: #w mode to overide the existing file, r mode to read the file, a mode is append mode that lets to add to the existing file, and if that file doesnt exist it will create a new file for it
+                f.write(website + "|" + name + "|" + pwd + "\n") 
+
 
     while True:
         mode = input("Would you like to generate a new password or view an existing one? (view, generate), press q to quit: ")
@@ -72,6 +79,8 @@ if saveaccess_password == "yes":
             view()
         elif mode == "generate":
             generate()
+        elif mode == "add":
+            add()
         else:
             print("Invalid mode.")
             continue 
